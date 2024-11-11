@@ -4,18 +4,21 @@ import streamlit as st
 
 # 1. 기계학습 모델 파일 로드
 import joblib
-model = joblib.load('logistic_regression_model.pkl') 
+model = joblib.load('linear_regression_model (1).pkl') 
 
 # 2. 모델 설명
  st.title('하루 게시물 수에 따른 팔로워수 증가 예측 모델')
 
 # 3. 데이터시각화
 with col2:
-      st.subheader('')
-      st.image('' )   # 이미지 불러오기
+      st.subheader('데이터 시각화1')
+      st.image('시각화1 (1).png' )   # 이미지 불러오기
 with col3:
-      st.subheader('')
-      st.image('')    # 이미지 불러오기
+      st.subheader('데이터 시각화2')
+      st.image('시각화2.png')    # 이미지 불러오기
+ with col4:
+      st.subheader('데이터 시각화3')
+      st.image('시각화3.png')    # 이미지 불러오기
 
 # 4. 모델 활용
 
