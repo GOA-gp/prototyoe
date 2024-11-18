@@ -24,15 +24,25 @@ with col4:
 # 4. 모델 활용
 
 # 사용자의 입력을 받아서 a에 저장하기 (초기값은 0)
-a = st.number_input('하루 게시물수를 입력하세요 (게시물 수는 0이상이여야 합니다)', value=0)  
-
-# 버튼 생성 및 동작
-# 사용자의 입력을 받아서 a에 저장하기 (초기값은 0)
-a = st.number_input('하루 게시물수를 입력하세요 (게시물 수는 0이상이여야 합니다)', value=0)  
+a = st.number_input(
+    '하루 게시물수를 입력하세요 (게시물 수는 0이상이여야 합니다)', 
+    value=0, 
+    key='post_input'  # 고유 키를 설정하여 중복 방지
+)  
 
 # 버튼 생성 및 동작
 if st.button('팔로워가 몇명이나 증가할까?'):
-    # 예측 불가 메시지 출력
-    st.write('예측할 수 없습니다.')
+    if a < 0:
+        st.error('게시물 수는 0 이상이어야 합니다.')
+    else:
+        try:
+            # 모델을 사용하여 예측
+            prediction = model.predict([[a]])  # 입력값을 2차원 배열로 변환
+            st.success(f'예상 팔로워 수 증가: {prediction[0]:,.0f}명')
+        except Exception as e:
+            # 예측 중 에러 발생 시 처리
+            st.error('예측할 수 없습니다.')
+            st.write(f'에러: {e}')
+
 
 
