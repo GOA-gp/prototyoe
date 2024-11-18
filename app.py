@@ -42,7 +42,7 @@ if st.button('팔로워가 몇명이나 증가할까?'):
         except Exception as e:
             # 예측 중 에러 발생 시 처리
             st.error('예측할 수 없습니다.')
-            st.write(f'에러: {e}')
+           
 
 
 
