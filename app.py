@@ -33,7 +33,7 @@ a = st.number_input(
 # 버튼 생성 및 동작
 if st.button('팔로워가 몇명이나 증가할까?'):
     if a < 0:
-        st.error('게시물 수는 0 이상이어야 합니다.')
+        st.error('게시물 수는 0 이상의 정수여야 합니다.')
     else:
         try:
             # 모델을 사용하여 예측
