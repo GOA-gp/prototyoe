@@ -27,12 +27,12 @@ with col4:
 a = st.number_input('하루 게시물수를 입력하세요 (게시물 수는 0이상이여야 합니다)', value=0)  
 
 # 버튼 생성 및 동작
+# 사용자의 입력을 받아서 a에 저장하기 (초기값은 0)
+a = st.number_input('하루 게시물수를 입력하세요 (게시물 수는 0이상이여야 합니다)', value=0)  
+
+# 버튼 생성 및 동작
 if st.button('팔로워가 몇명이나 증가할까?'):
-    if a < 0:
-        st.write('0 이상의 값을 입력해 주세요')
-    else:
-        # 예측 모델을 통해 결과를 얻기
-        predicted_followers = model.predict([[a]])
-        st.write(f'예상되는 팔로워 증가 수는 {predicted_followers[0]}명 입니다.')
+    # 예측 불가 메시지 출력
+    st.write('예측할 수 없습니다.')
 
 
