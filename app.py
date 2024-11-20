@@ -25,7 +25,9 @@ with col3:
 with col4:
     st.subheader('데이터 시각화3')
     st.image('시각화3.png')       # 이미지 불러오기
-    st.write('이 모델의 모델평가 정확도는 -0.00 입니다')
+    
+    
+st.write('이 모델의 모델평가 정확도는 -0.00 입니다')
 
 # 4. 모델 활용
 
