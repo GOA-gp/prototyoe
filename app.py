@@ -8,7 +8,7 @@ model = joblib.load('linear_regression_model (1).pkl')
 st.title('하루 게시물 수에 따른 팔로워수 증가 예측 모델')
 st.write('사용데이터: 1000건')
 st.write('훈련데이터: 700건')
-st.write(테스트데이터: 300건')
+st.write('테스트데이터: 300건')
 st.write('사용한기계학습모델: 선형회귀')
 st.write('데이터 출처: kaggle')
 
